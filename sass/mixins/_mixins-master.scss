@@ -1,0 +1,42 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+@mixin shadow( $color ) {
+	box-shadow: 0 -1px 0px 0px $color,
+				0 3px 3px 0px $color,
+				1px 0 0 0 $color,
+				-1px 0 0 0 $color;
+}
+
+@mixin grey-border() {
+	@include shadow( $color__grey-shadow );
+}
+
+@mixin gradient( $opacity: 1 ) {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#363c4e+0,1e5799+100 */
+	background: rgb(54,60,78); /* Old browsers */
+	background: linear-gradient(45deg, rgba(54,60,78,$opacity) 0%,rgba(30,87,153,$opacity) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363c4e', endColorstr='#1e5799',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

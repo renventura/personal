@@ -1,0 +1,148 @@
+/*--------------------------------------------------------------
+# Global variables
+--------------------------------------------------------------*/
+@import "variables/variables";
+
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+@import "mixins/mixins-master";
+
+body {
+	color: #303133;
+}
+
+.home-section {
+	display: table;
+	position: relative;
+	width: 100%;
+	padding: 200px 100px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: top right;
+
+	.title {
+		color: #303133;
+		font-size: 3em;
+		margin: 0 0 .5em;
+	}
+
+	.excerpt {
+		font-size: 1.3em;
+	}
+
+	.content {
+		position: relative;
+		z-index: 9;
+	}
+
+	&.home-section__image {
+		padding: 300px 100px;
+
+		.overlay {
+			@include gradient(.5);
+		}
+
+		.content {
+
+			.title, .excerpt {
+				color: #fff;
+			}
+		}
+	}
+
+	&.home-section__map {
+		padding: 0;
+		
+		.map {
+			width: 100%;
+		}
+	}
+
+	&.top {
+		padding: 200px 100px !important;
+
+		.overlay {
+			@include gradient(.8);
+		}
+
+		.title {
+			font-size: 5em;
+			margin-bottom: 0;
+		}
+
+		.excerpt {
+			font-size: 2em;
+		}
+	}
+
+	&:not(.top) {
+		text-align: center;
+
+		.title {
+
+			&:after {
+				content: " ";
+				display: block;
+				border-bottom: 1px solid #303133;
+				width: 100px;
+				margin: 20px auto;
+			}
+		}
+	}
+
+	.left,
+	.right {
+		display: table-cell;
+		width: 50%;
+		position: relative;
+		vertical-align: middle;
+		text-align: center;
+		z-index: 990;
+		.content {
+			position: relative;
+			z-index: 999;
+		}
+	}
+}
+
+@media only screen and (max-width: 860px) {
+
+	.home-section {
+
+		padding: 25px;
+
+		&.top {
+
+			.title {
+				font-size: 2em;
+			}
+
+			.excerpt {
+				font-size: 1.3em;
+			}
+		}
+
+		&:not(.top) {
+			text-align: left;
+
+			.title {
+
+				&:after {
+					margin: 20px 0;
+				}
+			}
+		}
+
+		.left,
+		.right {
+			text-align: left;
+			width: 100%;
+
+			&.sticktotop {
+				display: table-header-group;
+			}
+		}
+	}	
+}

@@ -1,0 +1,37 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-family: $font__header;
+	color: $color__heading;
+}
+
+h1 {
+	@include font-size($sizeValue: 4);
+}
+
+h2 {
+	@include font-size($sizeValue: 3);
+}
+
+h3 {
+	@include font-size($sizeValue: 2);
+}
+
+h4 {
+	@include font-size($sizeValue: 1.6);
+}
+
+h5 {
+	@include font-size($sizeValue: 1.4);
+}
+
+h6 {
+	@include font-size($sizeValue: 1.2);
+}
+
+.entry-title a {
+	color: $color__heading !important;
+
+	&:hover {
+		color: $color__link-hover !important;
+	}
+}

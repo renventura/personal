@@ -1,0 +1,145 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	overflow-x: hidden;
+}
+
+blockquote, q {
+	background: $color__grey;
+	border-left: 5px solid darken($color__grey, 10%);
+	padding: 15px;
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+	&.checklist {
+		list-style-type: none;
+		margin: 25px 0;
+		padding: 0;
+		li {
+			margin: 15px 0;
+			&:before {
+				content: url('../images/checkmark.svg');
+				position: relative;
+				left: 0;
+				top: 10px;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	text-align: left;
+	width: 100%;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+figure {
+	background: $color__grey;
+	padding: 20px;
+	display: inline-block;
+	text-align: center;
+}
+
+a {
+	color: $color__link;
+	text-decoration: none;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+table {
+	overflow-x: scroll;
+	caption {
+		color: $color__heading;
+		@include font-size(3);
+		&:after {
+			content: " ";
+			display: block;
+			border-bottom: 1px solid $color__heading;
+			width: 100px;
+			margin: 30px 0;
+		}
+	}
+	th, td {
+		padding: 10px;
+	}
+	th {
+		color: $color__heading;
+	}
+}

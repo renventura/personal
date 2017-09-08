@@ -1,0 +1,51 @@
+.hero-overlay {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+	opacity: .80;
+}
+
+.post-thumbnail {
+	.hero-overlay {
+		@include gradient();
+	}
+}
+
+#hero {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 75vh;
+	@include gradient();
+	clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+	position: relative;
+	display: table;
+	width: 100%;
+	z-index: 1;
+
+	.hero-content-wrap {
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+		z-index: 10;
+	}
+
+	.hero-content {
+		color: #fff !important;
+		padding: 0 25px;
+
+		.hero-title {
+			font-size: 3em;
+			display: block;
+		}
+
+		.hero-excerpt {
+			display: block;
+			max-width: 700px;
+		}
+	}
+}

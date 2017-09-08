@@ -1,0 +1,37 @@
+$color__grey: #F0F4FB;
+$color__grey-shadow: darken( $color__grey, 10% );
+
+$color__text-main: #989b9f;
+$color__heading: #4A5874;
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__menu-link: $color__heading;
+$color__link: #0066CC;
+$color__link-visited: $color__link;
+$color__link-hover: lighten( $color__link, 10% );
+
+$color__border-button: darken( #1C8EFC, 10% );
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+$color__background-mobile-menu: $color__grey;
+
+$color__background-body: #ffffff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #1C8EFC;
+$color__background-pre: $color__grey;
+$color__background-ins: #fff9c0;
+$color__background-entry: #fff;
+$color__background-footer: #363C4E;
+
+// Social media colors
+$color__twitter: #09b0ed;
+$color__facebook: #3d5a98;
+$color__googleplus: #dd4c39;
+$color__linkedin: #035a87;
+$color__youtube: #cc181e;
+$color__pinterest: #cb2127;

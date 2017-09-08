@@ -1,0 +1,49 @@
+/*
+	This file is compiled into main.css and minified to main.min.css
+	It contains all of the styles normally found in style.css
+	style.css is replaced via the stylesheet_uri filter
+*/
+
+/*--------------------------------------------------------------
+# Global variables
+--------------------------------------------------------------*/
+@import "variables/variables";
+
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Helpers
+--------------------------------------------------------------*/
+@import "helpers/normalize";
+@import "helpers/accessibility";
+@import "helpers/clearings";
+@import "helpers/flexboxgrid";
+@import "helpers/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Basics
+--------------------------------------------------------------*/
+@import "basics/basics";
+@import "basics/forms";
+@import "basics/menus";
+@import "basics/wordpress";
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+@import "layouts/default";
+@import "layouts/content-sidebar";
+@import "layouts/sidebar-content";
+
+/*--------------------------------------------------------------
+# Content elements
+--------------------------------------------------------------*/
+@import "elements/elements";

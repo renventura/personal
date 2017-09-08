@@ -1,0 +1,12 @@
+.site-footer {
+	background: $color__background-footer;
+	color: #fff;
+	@include font-size(1);
+	padding: 50px 25px;
+	text-align: center;
+
+	a {
+		color: #fff;
+		border-bottom: 1px dotted #fff;
+	}
+}

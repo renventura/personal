@@ -1,0 +1,33 @@
+.layout-default {
+
+	.site-content {
+		
+	}
+
+	.content-area {
+
+	}
+
+	.main-content {
+		margin: 0 auto;
+	}
+
+	.hentry {
+		
+	}
+
+	.entry-content {
+
+	}
+}
+
+@media only screen and (max-width: 860px) {
+
+	.layout-default {
+
+		.main-content {
+			width: 100%;
+		}
+	}
+
+}

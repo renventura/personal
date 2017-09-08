@@ -1,0 +1,20 @@
+.layout-sidebar-content {
+
+	.site-content {
+		
+		.content-sidebar {
+			display: flex;
+			flex-wrap: wrap;
+
+			.main-content {
+				order: 2;
+				width: $size__site-main - $size__site-sidebar;
+			}
+
+			.sidebar-widget {
+				order: 1;
+				width: $size__site-sidebar;
+			}
+		}
+	}
+}
