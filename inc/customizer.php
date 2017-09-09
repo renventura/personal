@@ -84,12 +84,6 @@ class Amerging_Theme_Customizer_Settings {
 									'label' => __( 'Favicon', 'personaltheme' ),
 								),
 								array(
-									'type' => 'image_upload',
-									'key' => 'personaltheme_logo',
-									'label' => __( 'Logo Image', 'personaltheme' ),
-									'description' => __( '', 'personaltheme' )
-								),
-								array(
 									'type' => 'number',
 									'key' => 'personaltheme_logo_width',
 									'label' => __( 'Logo Max Width', 'personaltheme' ),

@@ -72,22 +72,25 @@ function personaltheme_body_classes( $classes ) {
 	}
 
 	// Adds appropriate class for selected layout
-	$post_layout = get_post_meta( $post->ID, 'personaltheme_post_layout', true );
-	if ( isset( $post_layout ) && ! empty( $post_layout ) ) {
+	if ( is_object( $post ) ) {
 
-		switch ( $post_layout ) {
+		$post_layout = get_post_meta( $post->ID, 'personaltheme_post_layout', true );
+		if ( isset( $post_layout ) && ! empty( $post_layout ) ) {
 
-			case 'left_sidebar':
-				$layout = 'layout-sidebar-content';
-				break;
+			switch ( $post_layout ) {
 
-			case 'right_sidebar':
-				$layout = 'layout-content-sidebar';
-				break;
+				case 'left_sidebar':
+					$layout = 'layout-sidebar-content';
+					break;
 
-			case 'no_sidebar':
-				$layout = 'layout-default';
-				break;
+				case 'right_sidebar':
+					$layout = 'layout-content-sidebar';
+					break;
+
+				case 'no_sidebar':
+					$layout = 'layout-default';
+					break;
+			}
 		}
 	}
 

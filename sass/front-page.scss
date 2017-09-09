@@ -19,8 +19,8 @@ body {
 	padding: 200px 100px;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-attachment: fixed;
-	background-position: top right;
+	background-attachment: fixed !important;
+	background-position: center center;
 
 	.title {
 		color: #303133;
@@ -38,6 +38,7 @@ body {
 	}
 
 	&.home-section__image {
+		background: #000;
 		padding: 300px 100px;
 
 		.overlay {
@@ -110,7 +111,7 @@ body {
 @media only screen and (max-width: 860px) {
 
 	.home-section {
-
+		
 		padding: 25px;
 
 		&.top {
@@ -135,8 +136,13 @@ body {
 			}
 		}
 
+		&.home-section__image {
+			padding: 150px 50px;
+		}
+
 		.left,
 		.right {
+			display: block;
 			text-align: left;
 			width: 100%;
 

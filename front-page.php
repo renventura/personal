@@ -16,7 +16,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area front-content">
 
-		<div class="top home-section home-section__image backstretch" style="background-image: url('http://localhost:8888/wpapi/wp-content/uploads/2016/10/desk-items.jpg')">
+		<div class="top home-section home-section__image backstretch" style="background-image: url('<?php echo get_stylesheet_directory_uri() . "/images/desk.jpg" ; ?>')">
 			<div class="overlay"></div>
 			<div class="content">
 				<h2 class="title">Ren Ventura</h2>
@@ -67,7 +67,7 @@ get_header(); ?>
 			<a href="https://www.linkedin.com/in/renventura/" target="_blank" rel="noopener noreferrer"><?php include get_stylesheet_directory() . '/images/linkedin.svg'; ?></a>
 			<a href="https://twitter.com/CLE_Ren" target="_blank" rel="noopener noreferrer"><?php include get_stylesheet_directory() . '/images/twitter.svg'; ?></a>
 			<div class="excerpt contact-form">
-				<?php echo do_shortcode( '[ninja_form id=2]' ); ?>
+				<?php echo do_shortcode( '[ninja_form id=1]' ); ?>
 			</div>
 		</div>
 

@@ -2056,6 +2056,10 @@ fieldset legend:after {
 	margin: 20px 0;
 }
 
+.backstretch-item img {
+	left: 0;
+}
+
 .main-content {
 	width: 90%;
 	max-width: 900px;
