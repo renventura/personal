@@ -51,7 +51,7 @@ get_header(); ?>
 			<div class="overlay"></div>
 		</div>
 
-		<div class="home-section home-section__content">
+		<div id="work" class="home-section home-section__content">
 			<h2 class="title">Work Samples</h2>
 			<div class="excerpt">
 				See my <a href="https://github.com/renventura" target="_blank" rel="noopener noreferrer">Github</a> profile for code samples
@@ -62,7 +62,7 @@ get_header(); ?>
 			<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6120069.22736771!2d-86.18829027705978!3d41.49744701508516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830ef2ee3686b2d%3A0xed04cb55f7621842!2sCleveland%2C+OH!5e0!3m2!1sen!2sus!4v1504892025277" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
 
-		<div class="home-section home-section__content">
+		<div id="contact" class="home-section home-section__content">
 			<h2 class="title">Get in touch</h2>
 			<a href="https://www.linkedin.com/in/renventura/" target="_blank" rel="noopener noreferrer"><?php include get_stylesheet_directory() . '/images/linkedin.svg'; ?></a>
 			<a href="https://twitter.com/CLE_Ren" target="_blank" rel="noopener noreferrer"><?php include get_stylesheet_directory() . '/images/twitter.svg'; ?></a>

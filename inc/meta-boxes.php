@@ -40,7 +40,7 @@ function personaltheme_render_post_layout_meta_box( $post ) {
 function amerging_save_meta_box( $post_id, $post, $update ) {
 
 	if ( ! isset( $_POST['post-layout-nonce'] ) || ! wp_verify_nonce( $_POST['post-layout-nonce'], basename(__FILE__) ) ) {
-		die();
+		return;
 	}
 
 	if ( ! current_user_can( 'edit_post', $post_id ) ) {

@@ -92,6 +92,9 @@ function personaltheme_body_classes( $classes ) {
 					break;
 			}
 		}
+
+		// Post type
+		$classes[] = $post->post_type;
 	}
 
 	// Default if no widgets sidebar
@@ -100,9 +103,6 @@ function personaltheme_body_classes( $classes ) {
 	}
 
 	$classes[] = $layout;
-
-	// Post type
-	$classes[] = $post->post_type;
 
 	return $classes;
 }
@@ -128,7 +128,7 @@ function personaltheme_backstretch_setup() {
 
 	if ( is_singular() && has_post_thumbnail( $post->ID ) ) {
 		
-		$thumbnail = get_the_post_thumbnail_url( get_the_id() );
+		$thumbnail = get_the_post_thumbnail_url( get_the_id(), 'full' );
 		
 		wp_localize_script( 'personaltheme', 'backstretch', array(
 			'url' => $thumbnail

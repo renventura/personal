@@ -171,7 +171,7 @@ if ( ! function_exists( 'personaltheme_post_archive_thumbnail' ) ) :
 function personaltheme_post_archive_thumbnail() {
 
 	$image = wp_get_attachment_url( get_post_meta( get_the_id(), 'personaltheme_post_archive_thumbnail', true ) );
-	$image = $image ? $image : get_the_post_thumbnail_url();
+	$image = $image ? $image : get_the_post_thumbnail_url( null, 'full' );
 	
 	if ( $image ) {
 		printf( '<img src="%s" class="personaltheme-post-archive-thumbnail" alt="%s" />', $image, __( 'Post Thumbnail', 'personaltheme' ) );
@@ -251,7 +251,7 @@ function personaltheme_hero( $title = '', $description = '', $thumbnail = true, 
 	}
 
 	if ( $thumbnail && is_singular() && has_post_thumbnail() ) {
-		$thumbnail_url = get_the_post_thumbnail_url( get_the_id() );
+		$thumbnail_url = get_the_post_thumbnail_url( get_the_id(), 'full' );
 		$thumbnail_style = "style=\"background-image: url( $thumbnail_url );\"";
 	}
 
