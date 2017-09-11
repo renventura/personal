@@ -111,17 +111,17 @@ body {
 @media only screen and (max-width: 860px) {
 
 	.home-section {
-		
 		padding: 25px;
 
 		&.top {
+			padding: 100px 25px !important;
 
 			.title {
 				font-size: 2em;
 			}
 
 			.excerpt {
-				font-size: 1.3em;
+				font-size: 1.1em;
 			}
 		}
 

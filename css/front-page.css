@@ -116,11 +116,14 @@ body {
 	.home-section {
 		padding: 25px;
 	}
+	.home-section.top {
+		padding: 100px 25px !important;
+	}
 	.home-section.top .title {
 		font-size: 2em;
 	}
 	.home-section.top .excerpt {
-		font-size: 1.3em;
+		font-size: 1.1em;
 	}
 	.home-section:not(.top) {
 		text-align: left;
