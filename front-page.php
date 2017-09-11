@@ -64,8 +64,9 @@ get_header(); ?>
 
 		<div id="contact" class="home-section home-section__content">
 			<h2 class="title">Get in touch</h2>
-			<a href="https://www.linkedin.com/in/renventura/" target="_blank" rel="noopener noreferrer"><?php include get_stylesheet_directory() . '/images/linkedin.svg'; ?></a>
 			<a href="https://twitter.com/CLE_Ren" target="_blank" rel="noopener noreferrer"><?php include get_stylesheet_directory() . '/images/twitter.svg'; ?></a>
+			<a href="https://github.com/renventura" target="_blank" rel="noopener noreferrer"><?php include get_stylesheet_directory() . '/images/github.svg'; ?></a>
+			<a href="https://www.linkedin.com/in/renventura/" target="_blank" rel="noopener noreferrer"><?php include get_stylesheet_directory() . '/images/linkedin.svg'; ?></a>
 			<div class="excerpt contact-form">
 				<?php echo do_shortcode( '[ninja_form id=1]' ); ?>
 			</div>
