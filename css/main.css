@@ -1353,6 +1353,7 @@ textarea {
 	border-radius: 3px;
 	color: #666;
 	padding: 3px;
+	max-width: 100%;
 }
 
 input[type="text"]:focus,
@@ -1997,6 +1998,12 @@ fieldset legend:after {
 #hero .hero-content .hero-excerpt {
 	display: block;
 	max-width: 700px;
+}
+
+@media only screen and (max-width: 860px) {
+	#hero .hero-content-wrap {
+		vertical-align: top;
+	}
 }
 
 /*--------------------------------------------------------------
