@@ -33,8 +33,44 @@
 }
 
 .main-content {
-	width: 90%;
-	max-width: 900px;
+	
+}
+
+.full-width-content {
+	margin: 100px 0;
+	padding: 0 30px;
+}
+
+.full-width-image {
+	width: 100%;
+}
+
+.portfolio-info {
+	background: $color__grey;
+	padding: 20px;
+
+	.testimonial {
+		font-style: italic;
+	}
+
+	.name {
+		@include font-size(.8);
+		color: #000;
+
+		&:before {
+			content: "-";
+			margin-right: 5px;
+			display: inline-block;
+		}
+	}
+}
+
+.portfolio-link {
+	margin: 20px 0;
+	a {
+		display: block;
+		text-align: center;
+	}
 }
 
 .entry-meta {
@@ -67,7 +103,7 @@
 }
 
 .content-sidebar {
-	padding: 0 25px;
+	
 }
 
 .content-area {
@@ -75,9 +111,14 @@
 	margin-right: auto;
 }
 
+.entry-wrap {
+	width: 90%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
 .hentry {
 	background: $color__background-entry;
-	padding: 50px;
 }
 
 .blog-header {

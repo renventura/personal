@@ -1393,7 +1393,7 @@ input[type="submit"] {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363c4e', endColorstr='#1e5799',GradientType=1 );
 	/* IE6-9 fallback on horizontal gradient */
 	border: none;
-	color: #fff;
+	color: #fff !important;
 	display: inline-block;
 	line-height: 1;
 	padding: 1em 2em;
@@ -2067,9 +2067,43 @@ fieldset legend:after {
 	left: 0;
 }
 
-.main-content {
-	width: 90%;
-	max-width: 900px;
+.full-width-content {
+	margin: 100px 0;
+	padding: 0 30px;
+}
+
+.full-width-image {
+	width: 100%;
+}
+
+.portfolio-info {
+	background: #F0F4FB;
+	padding: 20px;
+}
+
+.portfolio-info .testimonial {
+	font-style: italic;
+}
+
+.portfolio-info .name {
+	font-size: 12.8px;
+	font-size: 0.8rem;
+	color: #000;
+}
+
+.portfolio-info .name:before {
+	content: "-";
+	margin-right: 5px;
+	display: inline-block;
+}
+
+.portfolio-link {
+	margin: 20px 0;
+}
+
+.portfolio-link a {
+	display: block;
+	text-align: center;
 }
 
 .entry-meta {
@@ -2099,18 +2133,19 @@ fieldset legend:after {
 	border-bottom: 1px dotted;
 }
 
-.content-sidebar {
-	padding: 0 25px;
-}
-
 .content-area {
 	margin-left: auto;
 	margin-right: auto;
 }
 
+.entry-wrap {
+	width: 90%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
 .hentry {
 	background: #fff;
-	padding: 50px;
 }
 
 .blog-header {

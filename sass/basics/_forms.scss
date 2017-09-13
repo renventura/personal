@@ -41,7 +41,7 @@ input[type="submit"] {
 	background: $color__background-button;
 	@include gradient();
 	border: none;
-	color: #fff;
+	color: #fff !important;
 	display: inline-block;
 	line-height: 1;
 	padding: 1em 2em;
