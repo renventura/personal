@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/CreativeWork">
 
 	<?php if ( have_rows( 'portfolio_layout' ) ) : ?>
 
@@ -17,7 +17,7 @@
 
 			<?php if ( get_row_layout() == 'single_column' ) : ?>
 
-				<div class="entry-wrap">
+				<div class="entry-wrap" itemprop="text">
 					
 					<?php echo get_sub_field( 'column_one' ); ?>
 
@@ -31,13 +31,13 @@
 
 						<div class="col-xs">
 							<div class="box">
-								<div class="column-one"><?php echo get_sub_field( 'column_one' ); ?></div>
+								<div class="column-one" itemprop="text"><?php echo get_sub_field( 'column_one' ); ?></div>
 							</div>
 						</div>
 
 						<div class="col-xs">
 							<div class="box">
-								<div class="column-two"><?php echo get_sub_field( 'column_two' ); ?></div>
+								<div class="column-two" itemprop="text"><?php echo get_sub_field( 'column_two' ); ?></div>
 							</div>
 						</div>
 
@@ -50,7 +50,7 @@
 				<?php $image = get_sub_field( 'full_image' ); ?>
 
 				<div class="full-width-image">
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+					<img itemprop="image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 				</div>
 
 			<?php elseif ( get_row_layout() == 'contained_image' ) :  ?>
@@ -58,7 +58,7 @@
 				<?php $image = get_sub_field( 'contained_image' ); ?>
 
 				<div class="entry-wrap" style="margin: 50px auto;">
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+					<img itemprop="image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 				</div>
 
 			<?php endif; ?>
@@ -73,7 +73,7 @@
 	
 	<div class="entry-wrap">
 		
-		<div class="entry-content">
+		<div class="entry-content" itemprop="text">
 			<?php the_content(); ?>
 		</div>
 
@@ -86,7 +86,9 @@
 			
 		</div>
 
-		<div class="portfolio-link"><a href="<?php the_field( 'project_url' ); ?>" class="button" target="_blank" rel="noopener noreferrer"><?php _e( 'View Project', 'personaltheme' ); ?></a></div>
+		<?php if ( get_field( 'project_url' ) ) : ?>
+			<div class="portfolio-link"><a href="<?php the_field( 'project_url' ); ?>" class="button" target="_blank" rel="noopener noreferrer" style="color: #fff;"><?php _e( 'View Project', 'personaltheme' ); ?></a></div>
+		<?php endif; ?>
 
 		<?php if ( get_edit_post_link() ) : ?>
 			<footer class="entry-footer">

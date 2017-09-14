@@ -6,9 +6,9 @@
 		
 		<div class="hero-content">
 
-			<span class="hero-title"><?php echo $title; ?></span>
+			<span class="hero-title" itemprop="name"><?php echo $title; ?></span>
 
-			<span class="hero-excerpt"><?php echo $description; ?></span>
+			<span class="hero-excerpt" itemprop="description"><?php echo $description; ?></span>
 			
 		</div><!-- .hero-content -->
 

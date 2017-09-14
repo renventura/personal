@@ -73,6 +73,14 @@
 	}
 }
 
+.archive-title {
+	margin-bottom: 10px;
+}
+
+.archive-terms {
+	@include font-size(.9);
+}
+
 .entry-meta {
 	@include font-size(.8);
 

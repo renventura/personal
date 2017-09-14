@@ -1414,6 +1414,38 @@ input[type="submit"]:hover {
 	        transform: scale(1.1);
 }
 
+.button.cta-button {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff5db1+0,ef017c+100;Pink+3D+%231 */
+	background: #ff5db1;
+	/* Old browsers */
+	background: linear-gradient(45deg, #ff5db1 0%, #ef017c 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#ef017c',GradientType=1 );
+	/* IE6-9 fallback on horizontal gradient */
+}
+
+.button.button-round {
+	background: none;
+	border: 2px solid #363C4E;
+	color: #363C4E !important;
+	border-radius: 300px;
+}
+
+.button.button-round:hover {
+	background: #363C4E;
+	color: #fff !important;
+}
+
+.button.button-round.cta-button {
+	border: none;
+	background: #ef017c;
+	color: #fff !important;
+}
+
+.button.button-round.cta-button:hover {
+	background: #fe2595;
+}
+
 fieldset {
 	border: none;
 	margin: 0;
@@ -2009,6 +2041,12 @@ fieldset legend:after {
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
+.pre-footer {
+	background: #F0F4FB;
+	padding: 100px 25px;
+	text-align: center;
+}
+
 .site-footer {
 	background: #363C4E;
 	color: #fff;
@@ -2104,6 +2142,15 @@ fieldset legend:after {
 .portfolio-link a {
 	display: block;
 	text-align: center;
+}
+
+.archive-title {
+	margin-bottom: 10px;
+}
+
+.archive-terms {
+	font-size: 14.4px;
+	font-size: 0.9rem;
 }
 
 .entry-meta {
@@ -2321,7 +2368,7 @@ fieldset legend:after {
 }
 
 .comment-list .comment-body {
-	background: #F0F4FB;
+	box-shadow: 0 -1px 0px 0px #c8d6f0, 0 3px 3px 0px #c8d6f0, 1px 0 0 0 #c8d6f0, -1px 0 0 0 #c8d6f0;
 	padding: 30px;
 	margin-bottom: 20px;
 }

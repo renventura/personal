@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 	
 	<div class="entry-wrap">
 		
@@ -17,7 +17,7 @@
 			<?php // the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
 
-		<div class="entry-content">
+		<div class="entry-content" itemprop="text">
 			<?php
 				the_content();
 

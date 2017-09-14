@@ -62,15 +62,15 @@ function personaltheme_posted_on() {
 	$author = sprintf(
 		esc_html_x( '%s', 'post author', 'personaltheme' ),
 		'<img src="' . $author_avatar_url . '" class="author-avatar" />
-		<span class="author vcard box">
+		<span class="author vcard box" itemprop="author">
 			<a class="url fn n" href="' . esc_url( get_author_posts_url( $author_id ) ) . '">' . esc_html( get_the_author() ) . '</a>
 		</span>'
 	);
 	
-	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	$time_string = '<time itemprop="datePublished" class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		$time_string = '<time itemprop="dateModified class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
 	$time_string = sprintf( $time_string,
@@ -174,7 +174,7 @@ function personaltheme_post_archive_thumbnail() {
 	$image = $image ? $image : get_the_post_thumbnail_url( null, 'full' );
 	
 	if ( $image ) {
-		printf( '<img src="%s" class="personaltheme-post-archive-thumbnail" alt="%s" />', $image, __( 'Post Thumbnail', 'personaltheme' ) );
+		printf( '<a href="%s" itemprop="url"><img itemprop="thumbnailUrl" src="%s" class="personaltheme-post-archive-thumbnail" alt="%s" /></a>', get_permalink(), $image, __( 'Post Thumbnail', 'personaltheme' ) );
 	}
 }
 

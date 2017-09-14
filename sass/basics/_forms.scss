@@ -60,6 +60,35 @@ input[type="submit"] {
 	}
 }
 
+.button.cta-button {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff5db1+0,ef017c+100;Pink+3D+%231 */
+	background: rgb(255,93,177); /* Old browsers */
+	background: linear-gradient(45deg, rgba(255,93,177,1) 0%,rgba(239,1,124,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#ef017c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.button.button-round {
+	background: none;
+	border: 2px solid $color__background-footer;
+	color: $color__background-footer !important;
+	border-radius: 300px;
+
+	&:hover {
+		background: $color__background-footer;
+		color: #fff !important;
+	}
+
+	&.cta-button {
+		border: none;
+		background: #ef017c;
+		color: #fff !important;
+
+		&:hover {
+			background: lighten( #ef017c, 10% );
+		}
+	}
+}
+
 fieldset {
     border: none;
     margin: 0;

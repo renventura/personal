@@ -52,10 +52,51 @@ get_header(); ?>
 		</div>
 
 		<div id="work" class="home-section home-section__content">
-			<h2 class="title">Work Samples</h2>
+			<h2 class="title">Recent Work</h2>
 			<div class="excerpt">
-				See my <a href="https://github.com/renventura" target="_blank" rel="noopener noreferrer">Github</a> profile for code samples
+				<p>See my <a href="https://github.com/renventura" target="_blank" rel="noopener noreferrer">Github</a> profile for code samples</p>
 			</div>
+			<?php
+				$projects = new WP_Query( array(
+					'post_type' => 'portfolio',
+					'posts_per_page' => 3,
+				) );
+
+				if ( $projects->have_posts() ) : ?>
+
+					<div class="projects">
+
+						<div class="row">
+						
+							<?php while ( $projects->have_posts() ) : $projects->the_post(); ?>
+
+								<?php
+									$thumb = get_field( 'archive_thumbnail' );
+									$terms = array();
+									foreach ( get_the_terms( get_the_id(), 'portfolio_cat' ) as $term ) {
+										$terms[] = $term->name;
+									}
+									$terms = implode( ', ', $terms );
+								?>
+
+								<div class="col-xs">
+									<div class="box project" itemscope itemtype="http://schema.org/CreativeWork">
+										<a href="<?php the_permalink(); ?>" itemprop="url"><img itemprop="thumbnailUrl" src="<?php echo $thumb['url']; ?>" alt="<?php echo $thumb['alt']; ?>"></a>
+										<a href="<?php the_permalink(); ?>" itemprop="url"><h3 itemprop="title" class="archive-title"><?php the_title(); ?></h3></a>
+										<div class="archive-terms"><?php echo $terms; ?></div>
+									</div>
+								</div>
+
+							<?php endwhile; ?>
+
+						</div>
+
+					</div>
+
+				<?php endif;
+
+				wp_reset_postdata();
+			?>
 		</div>
 		
 		<div class="home-section home-section__map">

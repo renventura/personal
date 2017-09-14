@@ -9,14 +9,14 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
 	
 	<div class="entry-wrap">
 		
 		<header class="entry-header">
 			<?php
 			if ( ! is_single() ) {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2 class="entry-title" itemprop="name"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			}
 
 			if ( 'post' === get_post_type() ) : ?>
@@ -27,7 +27,7 @@
 			endif; ?>
 		</header><!-- .entry-header -->
 
-		<div class="entry-content">
+		<div class="entry-content" itemprop="text">
 			<?php
 
 				if ( is_home() || is_archive() ) {
