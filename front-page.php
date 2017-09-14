@@ -42,7 +42,6 @@ get_header(); ?>
 				<p>HTML5 &amp; CSS3</p>
 				<p>JavaScript</p>
 				<p>PHP, Java</p>
-				<p>Version control (Git)</p>
 				<p>WordPress &amp; WooCommerce</p>
 			</div>
 		</div>

@@ -2114,6 +2114,12 @@ fieldset legend:after {
 	width: 100%;
 }
 
+.project {
+	border: 3px solid #F0F4FB;
+	border-radius: 5px;
+	padding: 20px;
+}
+
 .portfolio-info {
 	background: #F0F4FB;
 	padding: 20px;
