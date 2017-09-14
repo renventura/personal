@@ -49,17 +49,25 @@
 
 				<?php $image = get_sub_field( 'full_image' ); ?>
 
-				<div class="full-width-image">
-					<img itemprop="image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-				</div>
+				<?php if ( ! empty( $image ) ) : ?>
+
+					<div class="full-width-image">
+						<img itemprop="image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+					</div>
+
+				<?php endif; ?>
 
 			<?php elseif ( get_row_layout() == 'contained_image' ) :  ?>
 
 				<?php $image = get_sub_field( 'contained_image' ); ?>
 
-				<div class="entry-wrap" style="margin: 50px auto;">
-					<img itemprop="image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-				</div>
+				<?php if ( ! empty( $image ) ) : ?>
+
+					<div class="entry-wrap" style="margin: 50px auto;">
+						<img itemprop="image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+					</div>
+
+				<?php endif; ?>
 
 			<?php endif; ?>
 
@@ -79,10 +87,14 @@
 
 		<div class="portfolio-info">
 
-			<div class="client-testimonial">
-				<div class="testimonial"><?php the_field( 'client_testimonial' ); ?></div>
-				<div class="name"><?php the_field( 'client_name' ); ?></div>
-			</div>
+			<?php if ( get_field( 'client_testimonial' ) ) : ?>
+				<div class="client-testimonial">
+					<div class="testimonial"><?php the_field( 'client_testimonial' ); ?></div>
+					<?php if ( get_field( 'client_name' ) ) : ?>
+						<div class="name"><?php the_field( 'client_name' ); ?></div>
+					<?php endif; ?>
+				</div>
+			<?php endif; ?>
 			
 		</div>
 
