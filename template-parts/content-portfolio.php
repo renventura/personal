@@ -85,19 +85,17 @@
 			<?php the_content(); ?>
 		</div>
 
-		<div class="portfolio-info">
-
-			<?php if ( get_field( 'client_testimonial' ) ) : ?>
+		<?php if ( get_field( 'client_testimonial' ) ) : ?>
+			<div class="portfolio-info">
 				<div class="client-testimonial">
 					<div class="testimonial"><?php the_field( 'client_testimonial' ); ?></div>
 					<?php if ( get_field( 'client_name' ) ) : ?>
 						<div class="name"><?php the_field( 'client_name' ); ?></div>
 					<?php endif; ?>
 				</div>
-			<?php endif; ?>
+			</div>
+		<?php endif; ?>
 			
-		</div>
-
 		<?php if ( get_field( 'project_url' ) ) : ?>
 			<div class="portfolio-link"><a href="<?php the_field( 'project_url' ); ?>" class="button" target="_blank" rel="noopener noreferrer" style="color: #fff;"><?php _e( 'View Project', 'personaltheme' ); ?></a></div>
 		<?php endif; ?>
