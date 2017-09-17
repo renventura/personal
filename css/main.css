@@ -1548,6 +1548,7 @@ fieldset legend:after {
 	background-image: url("../images/menu-open.svg");
 	background-size: 32px;
 	background-repeat: no-repeat;
+	background-position: center right;
 	color: #4A5874;
 }
 

@@ -78,7 +78,7 @@ get_header(); ?>
 									$terms = implode( ', ', $terms );
 								?>
 
-								<div class="col-xs">
+								<div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
 									<div class="box project" itemscope itemtype="http://schema.org/CreativeWork">
 										<a href="<?php the_permalink(); ?>" itemprop="url"><img itemprop="thumbnailUrl" src="<?php echo $thumb['url']; ?>" alt="<?php echo $thumb['alt']; ?>"></a>
 										<a href="<?php the_permalink(); ?>" itemprop="url"><h3 itemprop="title" class="archive-title"><?php the_title(); ?></h3></a>
