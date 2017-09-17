@@ -136,3 +136,15 @@ function personaltheme_backstretch_setup() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'personaltheme_backstretch_setup' );
+
+/**
+ *	Redirect 404s to the front page
+ */
+function personaltheme_redirect_404s() {
+
+	if ( is_404() ) {
+		wp_redirect( get_home_url() );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'personaltheme_redirect_404s' );
