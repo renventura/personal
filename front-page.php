@@ -20,7 +20,7 @@ get_header(); ?>
 			<div class="overlay"></div>
 			<div class="content">
 				<h2 class="title">Ren Ventura</h2>
-				<div class="excerpt typeit">Software developer. Cleveland, Ohio.</div>
+				<div class="excerpt typeit">Software developer. Problem solver.</div>
 			</div>
 		</div>
 

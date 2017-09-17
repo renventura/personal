@@ -11,6 +11,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/CreativeWork">
 
+	<div class="entry-wrap">
+		<h2 class="project-headline"><?php _e( 'Project Highlights', 'personaltheme' ); ?></h2>
+	</div>
+
 	<?php if ( have_rows( 'portfolio_layout' ) ) : ?>
 
 		<?php while ( have_rows('portfolio_layout') ) : the_row(); ?>
@@ -82,12 +86,14 @@
 	<div class="entry-wrap">
 		
 		<div class="entry-content" itemprop="text">
+			<h2 class="project-headline"><?php _e( 'Project Overview', 'personaltheme' ); ?></h2>
 			<?php the_content(); ?>
 		</div>
 
 		<?php if ( get_field( 'client_testimonial' ) ) : ?>
-			<div class="portfolio-info">
+			<div class="project-info">
 				<div class="client-testimonial">
+					<h4 style="margin-top: 0;"><?php _e( 'What the client said...', 'personaltheme' ); ?></h4>
 					<div class="testimonial"><?php the_field( 'client_testimonial' ); ?></div>
 					<?php if ( get_field( 'client_name' ) ) : ?>
 						<div class="name"><?php the_field( 'client_name' ); ?></div>
@@ -97,7 +103,7 @@
 		<?php endif; ?>
 			
 		<?php if ( get_field( 'project_url' ) ) : ?>
-			<div class="portfolio-link"><a href="<?php the_field( 'project_url' ); ?>" class="button" target="_blank" rel="noopener noreferrer" style="color: #fff;"><?php _e( 'View Project', 'personaltheme' ); ?></a></div>
+			<div class="project-link"><a href="<?php the_field( 'project_url' ); ?>" class="button" target="_blank" rel="noopener noreferrer" style="color: #fff;"><?php _e( 'View Project', 'personaltheme' ); ?></a></div>
 		<?php endif; ?>
 
 		<?php if ( get_edit_post_link() ) : ?>

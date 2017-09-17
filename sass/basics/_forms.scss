@@ -90,18 +90,18 @@ input[type="submit"] {
 }
 
 fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
+	border: none;
+	margin: 0;
+	padding: 0;
 
-    legend {
-    	color: $color__heading;
-    	&:after {
-    		content: " ";
-    		display: block;
-    		border-bottom: 1px solid $color__heading;
-    		width: 60px;
-    		margin: 20px 0;
-    	}
-    }
+	legend {
+		color: $color__heading;
+		&:after {
+			content: " ";
+			display: block;
+			border-bottom: 1px solid $color__heading;
+			width: 60px;
+			margin: 20px 0;
+		}
+	}
 }

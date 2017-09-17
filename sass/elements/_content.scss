@@ -1,3 +1,7 @@
+.center {
+	text-align: center;
+}
+
 .overlay {
 	@include gradient(.8);
 	height: 100%;
@@ -51,7 +55,7 @@
 	padding: 20px;
 }
 
-.portfolio-info {
+.client-testimonial {
 	background: $color__grey;
 	padding: 20px;
 
@@ -71,11 +75,23 @@
 	}
 }
 
-.portfolio-link {
+.project-link {
 	margin: 20px 0;
 	a {
 		display: block;
 		text-align: center;
+	}
+}
+
+.project-headline {
+	text-align: center;
+
+	&:after {
+		content: " ";
+		display: block;
+		border-bottom: 2px solid $color__heading;
+		width: 100px;
+		margin: 20px auto;
 	}
 }
 

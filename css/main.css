@@ -2064,6 +2064,10 @@ fieldset legend:after {
 /*--------------------------------------------------------------
 ## Content
 --------------------------------------------------------------*/
+.center {
+	text-align: center;
+}
+
 .overlay {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#363c4e+0,1e5799+100 */
 	background: #363c4e;
@@ -2120,34 +2124,46 @@ fieldset legend:after {
 	padding: 20px;
 }
 
-.portfolio-info {
+.client-testimonial {
 	background: #F0F4FB;
 	padding: 20px;
 }
 
-.portfolio-info .testimonial {
+.client-testimonial .testimonial {
 	font-style: italic;
 }
 
-.portfolio-info .name {
+.client-testimonial .name {
 	font-size: 12.8px;
 	font-size: 0.8rem;
 	color: #000;
 }
 
-.portfolio-info .name:before {
+.client-testimonial .name:before {
 	content: "-";
 	margin-right: 5px;
 	display: inline-block;
 }
 
-.portfolio-link {
+.project-link {
 	margin: 20px 0;
 }
 
-.portfolio-link a {
+.project-link a {
 	display: block;
 	text-align: center;
+}
+
+.project-headline {
+	text-align: center;
+}
+
+.project-headline:after {
+	content: " ";
+	display: block;
+	border-bottom: 2px solid #4A5874;
+	width: 100px;
+	margin: 20px auto;
 }
 
 .archive-title {
