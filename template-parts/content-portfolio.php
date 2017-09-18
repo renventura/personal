@@ -103,7 +103,10 @@
 		<?php endif; ?>
 			
 		<?php if ( get_field( 'project_url' ) ) : ?>
-			<div class="project-link"><a href="<?php the_field( 'project_url' ); ?>" class="button" target="_blank" rel="noopener noreferrer" style="color: #fff;"><?php _e( 'View Project', 'personaltheme' ); ?></a></div>
+			<div class="project-link">
+				<div class="alert alert-info">Please note that projects may be altered by the client or another developer after they have been launched.</div>
+				<p><a href="<?php the_field( 'project_url' ); ?>" class="button" target="_blank" rel="noopener noreferrer" style="color: #fff;"><?php _e( 'View Project', 'personaltheme' ); ?></a></p>
+			</div>
 		<?php endif; ?>
 
 		<?php if ( get_edit_post_link() ) : ?>

@@ -28,7 +28,7 @@ get_header(); ?>
 			<div class="content">
 				<img src="<?php echo get_stylesheet_directory_uri() . '/images/renventura.jpg' ?>" alt="Ren Ventura" class="headshot aligncenter">
 				<h2 class="title">Hey, I'm Ren</h2>
-				<div class="excerpt">I develop software solutions for complexities facing modern businesses. I live for what I do. When I'm not "working", I'm either learning new skills, or cooking (and eating, of course).</div>
+				<div class="excerpt">I develop web and software solutions for complexities facing modern businesses. I live for what I do. When I'm not "working", I'm either learning new skills, or cooking (and eating, of course).</div>
 			</div>
 		</div>
 			

@@ -1,3 +1,28 @@
+.alert {
+	padding: 30px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	width: auto;
+	font-size: 20px;
+}
+.alert-warning {
+	background-color: #FFFBCC;
+	border: 1px solid #FFFAB2;
+}
+.alert-success {
+	background-color: #C0FFA7;
+	border-color: #92FF66;
+}
+.alert-error {
+	background-color: #FFBCBC;
+	border-color: #FF7F7F;
+	color: #000;
+}
+.alert-info {
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+
 .center {
 	text-align: center;
 }
